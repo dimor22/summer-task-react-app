@@ -1,0 +1,181 @@
+[
+  {
+    "_id": "1",
+    "title": "Do your bed 5'",
+    "desc": "Do your bed, pick-up and put away clothes.",
+    "activity":
+    {
+      "shaila": {
+        "status": "not-completed",
+        "time": "2021-06-01"
+      },
+      "amaira": {
+        "status": "not-completed",
+        "time": "2021-06-01"
+      },
+      "benjamin": {
+        "status": "not-completed",
+        "time": "2021-06-01"
+      }
+    }
+  },
+  {
+    "_id": "2",
+    "title": "Personal Grooming 20'",
+    "desc": "Dress up and do your hair to perfection :).",
+    "activity":
+      {
+        "shaila": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        },
+        "amaira": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        },
+        "benjamin": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        }
+      }
+  },
+  {
+    "_id": "3",
+    "title": "Read 30'",
+    "desc": "Read for 30 minutes, write down new words.",
+    "activity":
+      {
+        "shaila": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        },
+        "amaira": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        },
+        "benjamin": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        }
+      }
+  },
+  {
+    "_id": "4",
+    "title": "Practice a Primary Song 15'",
+    "desc": "Choose a primary song and sing it at least twice.",
+    "activity":
+      {
+        "shaila": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        },
+        "amaira": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        },
+        "benjamin": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        }
+      }
+  },
+  {
+    "_id": "5",
+    "title": "Play Chess 20'",
+    "desc": "Play at least two games of chess.",
+    "activity":
+      {
+        "shaila": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        },
+        "amaira": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        },
+        "benjamin": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        }
+      }
+  },
+  {
+    "_id": "6",
+    "title": "Jump Rope 5'",
+    "desc": "Jump rope for about 5 minutes.",
+    "activity":
+      {
+        "shaila": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        },
+        "amaira": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        },
+        "benjamin": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        }
+      }
+  },
+  {
+    "_id": "7",
+    "title": "Write 30'",
+    "desc": "Write a story or in your journal at least 4 paragraphs long.",
+    "activity":
+      {
+        "shaila": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        },
+        "amaira": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        },
+        "benjamin": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        }
+      }
+  },
+  {
+    "_id": "8",
+    "title": "Practice Typing 20'",
+    "desc": "Get onto the Typing app and practice for at least 20 minutes.",
+    "activity": {
+        "shaila": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        },
+        "amaira": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        },
+        "benjamin": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        }
+      }
+  },
+  {
+    "_id": "9",
+    "title": "Program 30'",
+    "desc": "User Swift Playgrounds for about 30 minutes.",
+    "activity":
+      {
+        "shaila": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        },
+        "amaira": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        },
+        "benjamin": {
+          "status": "not-completed",
+          "time": "2021-06-01"
+        }
+      }
+  }
+]

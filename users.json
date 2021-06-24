@@ -1,0 +1,17 @@
+[
+  {
+    "_id": "1",
+    "name": "Shaila",
+    "image": "shaila.jpg"
+  },
+  {
+    "_id": "2",
+    "name": "Amaira",
+    "image": "amaira.jpg"
+  },
+  {
+    "_id": "3",
+    "name": "Benjamin",
+    "image": "ben.jpg"
+  }
+]

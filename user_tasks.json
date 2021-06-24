@@ -1,0 +1,38 @@
+[
+  {
+    "user_id": "1",
+    "task_id": "1",
+    "status": "completed",
+    "datetime": "0000-00-00 00:00:00"
+  },
+  {
+    "user_id": "1",
+    "task_id": "2",
+    "status": "completed",
+    "datetime": "0000-00-00 00:00:00"
+  },
+  {
+    "user_id": "1",
+    "task_id": "3",
+    "status": "completed",
+    "datetime": "0000-00-00 00:00:00"
+  },
+  {
+    "user_id": "2",
+    "task_id": "1",
+    "status": "completed",
+    "datetime": "0000-00-00 00:00:00"
+  },
+  {
+    "user_id": "2",
+    "task_id": "2",
+    "status": "completed",
+    "datetime": "0000-00-00 00:00:00"
+  },
+  {
+    "user_id": "2",
+    "task_id": "3",
+    "status": "completed",
+    "datetime": "0000-00-00 00:00:00"
+  }
+]
