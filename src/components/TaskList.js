@@ -13,6 +13,7 @@ class TaskList extends React.Component {
                 <li key={task._id}>
                     <Task
                           id={task._id}
+                          task={task}
                           user={user}
                           activity={task.activity}
                           onTaskChange={onTaskChange}/>

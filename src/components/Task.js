@@ -6,19 +6,20 @@ class Task extends React.Component {
 
     render() {
 
-        const { activity, user, id, onTaskChange } = this.props
+        const { activity, user, id, onTaskChange, task } = this.props
 
         return (
             <React.Fragment>
                 <div className="title">
-                    Task title
+                    {task.title}
                 </div>
                 <div className="desc">
-                    Task description goes here
+                    {task.desc}
                 </div>
                 <Button activity={activity}
                         user = {user}
-                        id={id} onTaskChange={onTaskChange}/>
+                        id={id}
+                        onTaskChange={onTaskChange}/>
             </React.Fragment>
         );
     }

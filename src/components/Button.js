@@ -17,7 +17,7 @@ class Button extends React.Component {
         return (
             <button
                 type="button"
-                onClick={ () => this.props.onTaskChange(id, userTaskStatus)}>{user}{buttonLabel}
+                onClick={ () => this.props.onTaskChange(id, userTaskStatus)}>{buttonLabel}
             </button>
         );
     }
