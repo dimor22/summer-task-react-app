@@ -3,6 +3,7 @@ import React from 'react';
 import * as Realm from "realm-web";
 import TaskIndicator from "./TaskIndicator";
 import TaskList from "./TaskList";
+import realmKey from "../private/realmKey";
 
 class UserTasks extends React.Component {
 
@@ -44,9 +45,9 @@ class UserTasks extends React.Component {
 
                 let mongoTasks = null;
 
-                async function loginAnonymous() {
-                    // Create an anonymous credential
-                    const credentials = Realm.Credentials.anonymous();
+                async function loginApiKey(apiKey) {
+                    // Create an API Key credential
+                    const credentials = Realm.Credentials.apiKey(apiKey);
                     try {
                         // Authenticate the user
                         const user = await app.logIn(credentials);
@@ -58,7 +59,7 @@ class UserTasks extends React.Component {
                     }
                 }
 
-                loginAnonymous().then( () => {
+                loginApiKey(realmKey).then(() => {
 
                     const mongodb = app.currentUser.mongoClient("mongodb-atlas");
                     this.setState({db: mongodb});
@@ -93,9 +94,9 @@ class UserTasks extends React.Component {
         const REALM_APP_ID = "summer-app-bzevs"; // e.g. myapp-abcde
         const app = new Realm.App({ id: REALM_APP_ID });
 
-        async function loginAnonymous() {
-            // Create an anonymous credential
-            const credentials = Realm.Credentials.anonymous();
+        async function loginApiKey(apiKey) {
+            // Create an API Key credential
+            const credentials = Realm.Credentials.apiKey(apiKey);
             try {
                 // Authenticate the user
                 const user = await app.logIn(credentials);
@@ -107,12 +108,10 @@ class UserTasks extends React.Component {
             }
         }
 
-        loginAnonymous().then( () => {
-
+        loginApiKey(realmKey).then(() => {
             const mongodb = app.currentUser.mongoClient("mongodb-atlas");
             this.setState({db: mongodb});
             const tasksRes = mongodb.db("summer_react_app").collection("tasks");
-
             const tasks = tasksRes.find();
             tasks.then(tasks => {
                 this.setState({tasks: tasks});
@@ -127,7 +126,6 @@ class UserTasks extends React.Component {
 
                 this.setState({indicator: {total: tasks.length, left: count}})
             })
-
         })
 
     }
