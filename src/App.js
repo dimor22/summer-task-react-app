@@ -1,14 +1,16 @@
 import React from 'react';
 import './App.css';
 import UserTasks from "./components/UserTasks";
+import RefreshBtn from "./components/RefreshBtn";
 
 
 function App() {
 
     return(
         <React.Fragment>
-          <UserTasks user="shaila"/>
-          <UserTasks user="amaira"/>
+            <RefreshBtn/>
+            <UserTasks user="shaila"/>
+            <UserTasks user="amaira"/>
         </React.Fragment>
     )
 }

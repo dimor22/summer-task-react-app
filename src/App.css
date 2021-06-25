@@ -45,6 +45,11 @@ li{
     box-shadow: 5px 5px 10px #f3f3f3;
     max-width: 91%;
 }
+.refresh-btn {
+    position: absolute;
+    right: 20px;
+    box-shadow: 5px 5px 9px #80808042;
+}
 button {
     padding: 5px 10px;
     margin-top: 10px;
