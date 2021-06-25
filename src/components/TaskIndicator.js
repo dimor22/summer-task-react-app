@@ -2,10 +2,10 @@ import React from 'react';
 
 function TaskIndicator (props) {
     return (
-        <React.Fragment>
+        <div className="task-indicator">
             <div>Total Tasks: <strong>{props.total}</strong></div>
             <div>Tasks Left: <strong>{props.left}</strong></div>
-        </React.Fragment>
+        </div>
     )
 }
 

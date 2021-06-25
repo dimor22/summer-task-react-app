@@ -9,7 +9,7 @@ class Task extends React.Component {
         const { activity, user, id, onTaskChange, task } = this.props
 
         return (
-            <React.Fragment>
+            <div className="task-row">
                 <div className="title">
                     {task.title}
                 </div>
@@ -20,7 +20,7 @@ class Task extends React.Component {
                         user = {user}
                         id={id}
                         onTaskChange={onTaskChange}/>
-            </React.Fragment>
+            </div>
         );
     }
 }

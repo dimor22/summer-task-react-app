@@ -131,13 +131,17 @@ class UserTasks extends React.Component {
     }
 
     render() {
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
         return(
-                <React.Fragment>
+                <div className="task-list">
+                    <h1>{capitalizeFirstLetter(this.state.user)}</h1>
                     <TaskIndicator total={this.state.indicator.total}
                                    left={this.state.indicator.left}/>
                     <TaskList tasks={this.state.tasks} user={this.props.user}
                               onTaskChange={this.handleTaskChange}/>
-                </React.Fragment>
+                </div>
             )
     }
 }

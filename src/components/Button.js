@@ -16,6 +16,7 @@ class Button extends React.Component {
 
         return (
             <button
+                data-status={buttonLabel}
                 type="button"
                 onClick={ () => this.props.onTaskChange(id, userTaskStatus)}>{buttonLabel}
             </button>
