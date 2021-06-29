@@ -1,6 +1,6 @@
-function RefreshBtn(){
+function RefreshBtn(props){
     return (
-        <button className="refresh-btn" onClick={() => window.location.reload()}>Refresh List</button>
+        <button className="refresh-btn" onClick={() => props.update()}>Update List</button>
     )
 }
 

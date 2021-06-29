@@ -1,0 +1,86 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-size: 16px;
+}
+h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+li{
+    list-style: none;
+}
+#root {
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+.task-indicator {
+    display: flex;
+    justify-content: space-between;
+}
+.task-list {
+    width: 100%;
+    min-width: 352px;
+}
+.task-list img {
+    width: 200px;
+    border-radius: 50%;
+}
+.task-indicator div {
+    margin-right: 20px;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+.task-indicator strong {
+    font-size: 2rem;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+}
+.task-row {
+    margin: 10px 0 20px 0;
+    border: 1px solid #dadada80;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 5px 5px 10px #f3f3f3;
+
+}
+
+.refresh-btn {
+    position: relative;
+    box-shadow: 5px 5px 9px #80808042;
+}
+button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+[data-status="Incomplete"] {
+    background-color: #ec3f3f;
+    color: white;
+}
+[data-status="Completed"] {
+    background-color: #2ad22a;
+    color: white;
+}
+.all-done {
+    background: #2ad229;
+    color: white;
+    padding: 2px 5px;
+}
+@media(min-width: 500px) {
+    .task-list{
+        margin-right: 30px;
+        max-width: 420px;
+    }
+}

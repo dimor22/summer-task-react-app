@@ -4,8 +4,6 @@ import React from 'react';
 
 class TaskList extends React.Component {
 
-
-
     render() {
         const { user, tasks, onTaskChange } = this.props;
         const taskItems = tasks.map( (task) =>

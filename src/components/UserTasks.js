@@ -3,13 +3,16 @@ import React from 'react';
 import * as Realm from "realm-web";
 import TaskIndicator from "./TaskIndicator";
 import TaskList from "./TaskList";
+import UserImage from "./UserImage";
+import RefreshBtn from "./RefreshBtn";
 import realmKey from "../private/realmKey";
 
 class UserTasks extends React.Component {
 
     constructor(props) {
         super(props);
-        this.handleTaskChange = this.handleTaskChange.bind(this)
+        this.handleTaskChange = this.handleTaskChange.bind(this);
+        this.updateList = this.updateList.bind(this);
 
         this.state = {
             db: null,
@@ -18,24 +21,27 @@ class UserTasks extends React.Component {
                 total: 0,
                 left: 0
             },
-            tasks : []
+            tasks : [],
+            timeStamp: ''
         } ;
     }
 
-    handleTaskChange(id, btnStatus){
+    handleTaskChange(id, btnStatus, time){
 
         let updatedTasks = [...this.state.tasks];
 
         // Update status
         updatedTasks.forEach( task => {
-            let statusToPersist = '';
+
             if ( task._id === id ) {
                 if ( btnStatus === 'not-completed') {
                     task.activity[this.state.user].status = 'completed';
-                    statusToPersist = 'completed';
+                    task.activity[this.state.user].time = time;
+
                 } else {
                     task.activity[this.state.user].status = 'not-completed';
-                    statusToPersist = 'not-completed';
+                    task.activity[this.state.user].time = time;
+
                 }
 
                 // save to mongo db
@@ -68,7 +74,6 @@ class UserTasks extends React.Component {
                     let oldTask = tasksRes.findOneAndUpdate({_id: id}, task );
 
                     oldTask.then(() => {
-                        console.log(`task ${id} updated`);
                     }).catch(err=>console.log(err))
 
                 })
@@ -90,6 +95,23 @@ class UserTasks extends React.Component {
 
     componentDidMount() {
 
+        this.getList();
+
+    }
+
+    updateList(){
+
+        const date = new Date();
+        const [day, hour, minutes, seconds] = [date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds()];
+
+        this.setState({
+            timeStamp: `${day}, ${hour}:${minutes}:${seconds}`
+        });
+
+        this.getList();
+    }
+
+    getList(){
         // Mongo DB call
         const REALM_APP_ID = "summer-app-bzevs"; // e.g. myapp-abcde
         const app = new Realm.App({ id: REALM_APP_ID });
@@ -127,7 +149,6 @@ class UserTasks extends React.Component {
                 this.setState({indicator: {total: tasks.length, left: count}})
             })
         })
-
     }
 
     render() {
@@ -136,7 +157,13 @@ class UserTasks extends React.Component {
         }
         return(
                 <div className="task-list">
-                    <h1>{capitalizeFirstLetter(this.state.user)}</h1>
+                    <div className="tasks-header">
+                        <UserImage user={this.props.user}/>
+                        <div>
+                            <RefreshBtn update={this.updateList}/>
+                            <h1>{capitalizeFirstLetter(this.state.user)}</h1>
+                        </div>
+                    </div>
                     <TaskIndicator total={this.state.indicator.total}
                                    left={this.state.indicator.left}/>
                     <TaskList tasks={this.state.tasks} user={this.props.user}
